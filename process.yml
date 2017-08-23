@@ -1,0 +1,13 @@
+# pm2 stop all && pm2 delete all && pm2 flush
+# pm2 start process.yml && pm2 monit
+
+apps:
+  - script   : socket.js
+    instances: 1
+    exec_mode: cluster
+  - script   : number_worker.js
+    instances: 1
+    exec_mode: cluster
+  - script   : string_worker.js
+    instances: 1
+    exec_mode: cluster
